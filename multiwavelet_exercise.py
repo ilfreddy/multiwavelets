@@ -79,10 +79,6 @@ def getfilter(type="H",flag=0,np=4):
 
 
 if __name__ == '__main__':
-#    print getfilter("H",0,2)
-#    print getfilter("H",1,2)
-#    print getfilter("G",0,2)
-#    print getfilter("G",1,2)
     x = numpy.arange(0, 1.0001, 0.001);
     w0 = numpy.array([wavelet_nl(0,3,0,8,x[i]) for i in range(x.size)])
     w1 = numpy.array([wavelet_nl(1,3,1,8,x[i]) for i in range(x.size)])
@@ -92,15 +88,6 @@ if __name__ == '__main__':
     w5 = numpy.array([wavelet_nl(5,3,5,8,x[i]) for i in range(x.size)])
     w6 = numpy.array([wavelet_nl(6,3,6,8,x[i]) for i in range(x.size)])
     w7 = numpy.array([wavelet_nl(7,3,7,8,x[i]) for i in range(x.size)])
-#    s00 = numpy.array([scaling_nl(0,1,0,x[i]) for i in range(x.size)])
-#    s01 = numpy.array([scaling_nl(1,1,0,x[i]) for i in range(x.size)])
-#    s10 = numpy.array([scaling_nl(0,1,1,x[i]) for i in range(x.size)])
-#    s11 = numpy.array([scaling_nl(1,1,1,x[i]) for i in range(x.size)])
-    #    plt.plot(x, s00, '.')
-    #    plt.plot(x, s01, '.')
-    #    plt.plot(x, s10, '.')
-    #    plt.plot(x, s11, '.')
-    
     plt.plot(x, w0)
     plt.plot(x, w1)
     plt.plot(x, w2)
