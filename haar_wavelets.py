@@ -1,5 +1,4 @@
-import numpy, sys, struct
-from math import sin, pi
+import numpy
 import matplotlib.pyplot as plt
 
 nPolynomials = 4
