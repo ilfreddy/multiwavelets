@@ -79,7 +79,7 @@ def getfilter(type="H",flag=0,np=4):
 
 
 if __name__ == '__main__':
-    x = numpy.arange(-0.4, 1.4001, 0.001);
+    x = numpy.arange(-0.1, 1.1001, 0.001);
     y0 = numpy.array([wavelet_nl(0,2,0,4,x[i]) for i in range(x.size)])
     y1 = numpy.array([wavelet_nl(1,2,1,4,x[i]) for i in range(x.size)])
     y2 = numpy.array([wavelet_nl(2,2,2,4,x[i]) for i in range(x.size)])
