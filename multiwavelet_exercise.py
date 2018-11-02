@@ -4,15 +4,20 @@ import matplotlib.pyplot as plt
 
 # luca.frediani@uit.no
 
-nPolynomials = 4
-max_scale = 5
-
 #
 # Given an index j and a position x, returns the value of the j-th scaling function in x
 # Tips: use the legendre polynomial defined by numpy
 #
 def scaling(j, x):
-    print "FIXME"
+    coef = [0] * j
+    coef.append(1)
+    factor = numpy.sqrt(2*j+1)
+    if(x >= 0 and x < 1):
+        polynom = numpy.polynomial.legendre.Legendre(coef, domain=[0,1])
+        value = polynom(x)
+    else:
+        value = 0.0
+    return factor * value
 
 #
 # Given the index j, the number of polynomials np, the position x,
