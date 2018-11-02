@@ -24,6 +24,8 @@ def scaling(j, x):
 # returns the value of the j-th wavelet function of order np in x
 #
 def wavelet(j,np,x):
+    G0 = getfilter("G", 0, np)
+    G1 = getfilter("G", 1, np)
     print "FIXME"
 
 #
